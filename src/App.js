@@ -1,24 +1,22 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { retriveGreeting } from './redux/reducer/message_reducer';
 import './App.css';
 
 const App = () => {
-  const backend_url = 'http://127.0.0.1:8000/messages/1'
+  const greeting = useSelector((state) => state.greeting);
 
+  const dispatch = useDispatch();
   useEffect(() => {
-    axios.get(backend_url)
-        .then(res => setMessage(res.data.message))
-        .catch(error => console.log(error))
-  }, []);
-
-  const [message, setMessage] = useState([]);
+    dispatch(retriveGreeting());
+  });
 
   return (
     <div className="App">
-      <h2> {message}</h2>
+      <h2>{greeting}</h2>
 
     </div>
   );
-}
+};
 
 export default App;
