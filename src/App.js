@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { retriveGreeting } from './redux/reducer/message_reducer';
+import Greeting from './Greeting';
 import './App.css';
 
 const App = () => {
@@ -12,10 +14,9 @@ const App = () => {
   });
 
   return (
-    <div className="App">
-      <h2>{greeting}</h2>
-
-    </div>
+    <Routes>
+      <Route path="/" element={<Greeting text={greeting} />} />
+    </Routes>
   );
 };
 
