@@ -57,9 +57,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 React Frontend for RoR API (Hello world) <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> When the page refreshes it retrives a random greeting from the a companied API (https://github.com/jaferIdrees/rails_api_hello/tree/develop).
 
 **[your_project__name]** is a...
 
